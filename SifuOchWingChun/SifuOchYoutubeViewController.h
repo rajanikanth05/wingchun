@@ -11,7 +11,11 @@
 #import "GDataYouTube.h"
 #import "GDataServiceGoogleYouTube.h"
 
-@interface SifuOchYoutubeViewController : UITableViewController
+@interface SifuOchYoutubeViewController : UITableViewController {
+    SifuOchAPIRequest *apiHandler;
+    GDataFeedYouTubeVideo *videos;
+    
+}
 
 @property(retain, nonatomic) SifuOchAPIRequest *apiHandler;
 @property(retain, nonatomic) GDataFeedYouTubeVideo *videos;

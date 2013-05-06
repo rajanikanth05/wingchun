@@ -257,6 +257,8 @@
 		9A98F36717345D2900D75302 /* GDataWhen.h in Resources */ = {isa = PBXBuildFile; fileRef = 9A98F28617345D2900D75302 /* GDataWhen.h */; };
 		9A98F36817345D2900D75302 /* GDataWhen.m in Resources */ = {isa = PBXBuildFile; fileRef = 9A98F28717345D2900D75302 /* GDataWhen.m */; };
 		9A98F36917345D2900D75302 /* GDataWhen.m in Resources */ = {isa = PBXBuildFile; fileRef = 9A98F28717345D2900D75302 /* GDataWhen.m */; };
+		9A98F36A17345D2900D75302 /* GDataWhere.h in Resources */ = {isa = PBXBuildFile; fileRef = 9A98F28817345D2900D75302 /* GDataWhere.h */; };
+		9A98F36B17345D2900D75302 /* GDataWhere.h in Resources */ = {isa = PBXBuildFile; fileRef = 9A98F28817345D2900D75302 /* GDataWhere.h */; };
 		9A98F36C17345D2900D75302 /* GDataName.m in Resources */ = {isa = PBXBuildFile; fileRef = 9A98F28917345D2900D75302 /* GDataName.m */; };
 		9A98F36D17345D2900D75302 /* GDataName.m in Resources */ = {isa = PBXBuildFile; fileRef = 9A98F28917345D2900D75302 /* GDataName.m */; };
 		9A98F36E17345D2900D75302 /* GDataName.h in Resources */ = {isa = PBXBuildFile; fileRef = 9A98F28A17345D2900D75302 /* GDataName.h */; };
@@ -622,6 +624,7 @@
 		A85179A316E9850500AEA9CA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A85179A216E9850500AEA9CA /* CoreGraphics.framework */; };
 		A85179A916E9850500AEA9CA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A85179A716E9850500AEA9CA /* InfoPlist.strings */; };
 		A85179AF16E9850500AEA9CA /* SifuOchAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A85179AE16E9850500AEA9CA /* SifuOchAppDelegate.m */; };
+		A85179B116E9850500AEA9CA /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A85179B016E9850500AEA9CA /* Default.png */; };
 		A85179B316E9850500AEA9CA /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A85179B216E9850500AEA9CA /* Default@2x.png */; };
 		A85179B516E9850600AEA9CA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A85179B416E9850500AEA9CA /* Default-568h@2x.png */; };
 		A85179B816E9850600AEA9CA /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A85179B616E9850600AEA9CA /* MainStoryboard_iPhone.storyboard */; };
@@ -689,9 +692,12 @@
 		A8CD4E8E1715213A0091A0F0 /* start2X.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4E73171521390091A0F0 /* start2X.png */; };
 		A8CD4E8F1715213A0091A0F0 /* videos.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4E741715213A0091A0F0 /* videos.png */; };
 		A8CD4E901715213A0091A0F0 /* videos2X.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4E751715213A0091A0F0 /* videos2X.png */; };
+		A8CD4E921715220A0091A0F0 /* icon2X.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4E911715220A0091A0F0 /* icon2X.png */; };
 		A8CD4E96171523880091A0F0 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4E95171523860091A0F0 /* email.png */; };
 		A8CD4E99171525A40091A0F0 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4E97171525A10091A0F0 /* twitter.png */; };
 		A8CD4E9A171525A40091A0F0 /* twitter2X.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4E98171525A30091A0F0 /* twitter2X.png */; };
+		A8CD4E9D1716279E0091A0F0 /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4E9B1716279A0091A0F0 /* twitter.png */; };
+		A8CD4E9E1716279E0091A0F0 /* twitter2X.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4E9C1716279D0091A0F0 /* twitter2X.png */; };
 		A8CD4EA1171628320091A0F0 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4E9F1716282E0091A0F0 /* facebook.png */; };
 		A8CD4EA2171628320091A0F0 /* facebook2X.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4EA0171628300091A0F0 /* facebook2X.png */; };
 		A8CD4EA51716291D0091A0F0 /* pinterest.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4EA31716291A0091A0F0 /* pinterest.png */; };
@@ -718,7 +724,11 @@
 		A8CD4ECE171635250091A0F0 /* right2X.png in Resources */ = {isa = PBXBuildFile; fileRef = A8CD4EC6171635230091A0F0 /* right2X.png */; };
 		A8F678D8171E69560083C201 /* SifuOchWingChunTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A85179D516E9850600AEA9CA /* SifuOchWingChunTests.m */; };
 		A8F678DC171E6F250083C201 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A85179AA16E9850500AEA9CA /* main.m */; };
+		A8F678E0171E70D40083C201 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8F678DD171E70D40083C201 /* Default-568h@2x.png */; };
 		A8F678E1171E70D40083C201 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A8F678DE171E70D40083C201 /* Default.png */; };
+		A8F678E2171E70D40083C201 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A8F678DF171E70D40083C201 /* Default@2x.png */; };
+		A8F678E5171E70E20083C201 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A8F678E3171E70E20083C201 /* icon.png */; };
+		A8F678E6171E70E20083C201 /* icon2X.png in Resources */ = {isa = PBXBuildFile; fileRef = A8F678E4171E70E20083C201 /* icon2X.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1811,6 +1821,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A85179A916E9850500AEA9CA /* InfoPlist.strings in Resources */,
+				A85179B116E9850500AEA9CA /* Default.png in Resources */,
 				A85179B316E9850500AEA9CA /* Default@2x.png in Resources */,
 				A85179B516E9850600AEA9CA /* Default-568h@2x.png in Resources */,
 				A85179B816E9850600AEA9CA /* MainStoryboard_iPhone.storyboard in Resources */,
@@ -1857,9 +1868,12 @@
 				A8CD4E8E1715213A0091A0F0 /* start2X.png in Resources */,
 				A8CD4E8F1715213A0091A0F0 /* videos.png in Resources */,
 				A8CD4E901715213A0091A0F0 /* videos2X.png in Resources */,
+				A8CD4E921715220A0091A0F0 /* icon2X.png in Resources */,
 				A8CD4E96171523880091A0F0 /* email.png in Resources */,
 				A8CD4E99171525A40091A0F0 /* twitter.png in Resources */,
 				A8CD4E9A171525A40091A0F0 /* twitter2X.png in Resources */,
+				A8CD4E9D1716279E0091A0F0 /* twitter.png in Resources */,
+				A8CD4E9E1716279E0091A0F0 /* twitter2X.png in Resources */,
 				A8CD4EA1171628320091A0F0 /* facebook.png in Resources */,
 				A8CD4EA2171628320091A0F0 /* facebook2X.png in Resources */,
 				A8CD4EA51716291D0091A0F0 /* pinterest.png in Resources */,
@@ -1884,7 +1898,11 @@
 				A8CD4ECC171635250091A0F0 /* phone2X.png in Resources */,
 				A8CD4ECD171635250091A0F0 /* right.png in Resources */,
 				A8CD4ECE171635250091A0F0 /* right2X.png in Resources */,
+				A8F678E0171E70D40083C201 /* Default-568h@2x.png in Resources */,
 				A8F678E1171E70D40083C201 /* Default.png in Resources */,
+				A8F678E2171E70D40083C201 /* Default@2x.png in Resources */,
+				A8F678E5171E70E20083C201 /* icon.png in Resources */,
+				A8F678E6171E70E20083C201 /* icon2X.png in Resources */,
 				9A98F1BB17345D1C00D75302 /* GDataYouTube.h in Resources */,
 				9A98F1BD17345D1C00D75302 /* GDataFeedYouTubeVideo.h in Resources */,
 				9A98F1BF17345D1C00D75302 /* GDataFeedYouTubeVideo.m in Resources */,
@@ -2010,6 +2028,7 @@
 				9A98F36417345D2900D75302 /* GDataWhere.m in Resources */,
 				9A98F36617345D2900D75302 /* GDataWhen.h in Resources */,
 				9A98F36817345D2900D75302 /* GDataWhen.m in Resources */,
+				9A98F36A17345D2900D75302 /* GDataWhere.h in Resources */,
 				9A98F36C17345D2900D75302 /* GDataName.m in Resources */,
 				9A98F36E17345D2900D75302 /* GDataName.h in Resources */,
 				9A98F37017345D2900D75302 /* GDataGenerator.m in Resources */,
@@ -2263,6 +2282,7 @@
 				9A98F36517345D2900D75302 /* GDataWhere.m in Resources */,
 				9A98F36717345D2900D75302 /* GDataWhen.h in Resources */,
 				9A98F36917345D2900D75302 /* GDataWhen.m in Resources */,
+				9A98F36B17345D2900D75302 /* GDataWhere.h in Resources */,
 				9A98F36D17345D2900D75302 /* GDataName.m in Resources */,
 				9A98F36F17345D2900D75302 /* GDataName.h in Resources */,
 				9A98F37117345D2900D75302 /* GDataGenerator.m in Resources */,
