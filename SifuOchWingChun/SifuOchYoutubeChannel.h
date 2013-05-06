@@ -8,14 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SifuOchYoutubeChannel : NSObject {
-    NSString *title;
-    NSString *url;
-    NSString *dateAdded;
-    NSString *dateUpdated;
-    NSString *author;
-    NSString *videoId;
-}
+@interface SifuOchYoutubeChannel : NSObject
 
 @property(nonatomic, retain) NSString *title;
 @property(nonatomic, retain) NSString *url;

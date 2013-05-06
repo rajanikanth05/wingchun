@@ -28,17 +28,11 @@
 {
     [super viewDidLoad];
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background-application.png"]]];
-    NSLog(@"HELLLLOOOO");
     _newsItems = [[NSMutableArray alloc] init];
     [_newsItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Pure Wing Chun Doesn't Exist", @"title", @"blah 111 blah 111 blah 111", @"description", @"http://sifuochwingchun.com/articles/in-depth-wing-chun/pure-wing-chun-doesnt-exist/", @"url", nil]];
     [_newsItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Kung Fu Is Dying", @"title", @"blah 222 blah 222 blah 222", @"description", @"http://sifuochwingchun.com/blog/martial-arts-kung-fu-is-dying/", @"url", nil]];
     [_newsItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Sifu Och Wing Chun, REAL Lakeland Self Defense", @"title", @"blah 333 blah 333 blah 333", @"description", @"http://sifuochwingchun.com/blog/sifu-och-wing-chun-real-lakeland-self-defense/", @"url", nil]];
     [_newsItems addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Lakeland Florida Martial Arts", @"title", @"blah 444 blah 444 blah 444", @"description", @"http://sifuochwingchun.com/blog/lakeland-florida-martial-arts-gung-fu/", @"url", nil]];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning

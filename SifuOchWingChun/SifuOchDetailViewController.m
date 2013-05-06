@@ -21,9 +21,6 @@
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
-        //NSLog(@"DetailItem: %@", _detailItem);
-        // Update the view.
-        //[self configureView];
     }
 
     if (self.masterPopoverController != nil) {
@@ -35,9 +32,6 @@
 {
     if (_videoUrl != newVideoUrl) {
         _videoUrl = newVideoUrl;
-        NSLog(@"videoUrl: %@", _videoUrl);
-        // Update the view.
-        //[self configureView];
     }
     
     if (self.masterPopoverController != nil) {

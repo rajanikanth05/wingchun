@@ -33,7 +33,6 @@
 {
     [super viewDidLoad];
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background-application.png"]]];
-    NSLog(@"URL: %@", _webUrl);
     NSURL *loadUrl = [NSURL URLWithString:_webUrl];
     NSURLRequest *reqObj = [NSURLRequest requestWithURL:loadUrl];
     [_webView loadRequest:reqObj];

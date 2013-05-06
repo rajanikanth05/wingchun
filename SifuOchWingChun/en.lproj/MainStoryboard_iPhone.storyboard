@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C2034" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -921,6 +921,97 @@
         <image name="pinterest.png" width="70" height="70"/>
         <image name="twitter.png" width="70" height="70"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SifuOchAboutViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchAboutViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="callSifuOch:"/>
+                <relationship kind="action" name="showDirections:"/>
+                <relationship kind="outlet" name="call" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="directions" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="logo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="viedoView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="SifuOchConnectViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchConnectViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="connectSocial:"/>
+                <relationship kind="action" name="connectWithInstagram:"/>
+                <relationship kind="action" name="connectWithPinterest:"/>
+                <relationship kind="action" name="connectWithTwitter:"/>
+                <relationship kind="outlet" name="facebook" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="foursquare" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="googleplus" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="instagram" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="pinterest" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="twView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="twitter" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SifuOchContactViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchContactViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendEmail:"/>
+                <relationship kind="outlet" name="emailField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="firstNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lastNameField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="messageField" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="phoneField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="SifuOchDescriptionViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchDescriptionViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goBack:"/>
+                <relationship kind="outlet" name="backButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="descriptionView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="navItem" candidateClass="UINavigationItem"/>
+            </relationships>
+        </class>
+        <class className="SifuOchDetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchDetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="videoDescriptionView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="videoScreen" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="SifuOchHomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchHomeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tabBar" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="SifuOchMasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchMasterViewController.h"/>
+        </class>
+        <class className="SifuOchNewsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchNewsViewController.h"/>
+        </class>
+        <class className="SifuOchSashesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchSashesViewController.h"/>
+        </class>
+        <class className="SifuOchVideoDetailsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchVideoDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendEmail:"/>
+                <relationship kind="outlet" name="contact" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="detailDescriptionLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="videoDescriptionView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="videoScreen" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="SifuOchWebViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchWebViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -9,13 +9,13 @@
 #import "SifuOchYoutubeViewController.h"
 #import "SifuOchYoutubeChannel.h"
 
-//@interface SifuOchYoutubeViewController ()
-//-(GDataServiceGoogleYouTube *)youtubeService;
-//@end
+@interface SifuOchYoutubeViewController ()
+-(GDataServiceGoogleYouTube *)youtubeService;
+@end
 
 @implementation SifuOchYoutubeViewController
 
-/*Undefined symbols for architecture i386:
+//Undefined symbols for architecture i386:
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -99,5 +99,5 @@ finishedWithFeed:(GDataFeedBase *)aFeed
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
  }
-*/
+
 @end

@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SifuOchDetailViewController : UIViewController <UISplitViewControllerDelegate> {
-    //NSString *videoUrl;
-}
+@interface SifuOchDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 @property (retain, nonatomic) NSString *videoUrl;
