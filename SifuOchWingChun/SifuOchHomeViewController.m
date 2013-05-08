@@ -117,7 +117,7 @@
             [self performSegueWithIdentifier:@"loveSegue" sender:self];
             break;
         case 4:
-            [self performSegueWithIdentifier:@"loveSegue" sender:self];
+            [self performSegueWithIdentifier:@"videoSegue" sender:self];
             break;
         case 5:
             [self performSegueWithIdentifier:@"newsSegue" sender:self];

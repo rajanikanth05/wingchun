@@ -8,6 +8,8 @@
 
 #import "SifuOchYoutubeViewController.h"
 #import "SifuOchYoutubeChannel.h"
+#import "SifuOchVideoViewCell.h"
+#import "SifuOchVideoDetailsViewController.h"
 
 //@interface SifuOchYoutubeViewController ()
 //-(GDataServiceGoogleYouTube *)youtubeService;
@@ -15,7 +17,6 @@
 
 @implementation SifuOchYoutubeViewController
 
-/*Undefined symbols for architecture i386:
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -28,28 +29,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self pullYoutubeChannelVideos];
+    //[self performSelectorInBackground:@selector(pullYoutubeChannelVideos) withObject:nil];
+}
+
+
+- (void)pullYoutubeChannelVideos {
     GDataServiceGoogleYouTube *service = [self youtubeService];
     NSString *uploadId = kGDataYouTubeUserFeedIDUploads;
     NSURL *feedURL = [GDataServiceGoogleYouTube youTubeURLForUserID:@"rajanikanth5" userFeedID:uploadId];
     [service fetchFeedWithURL:feedURL delegate:self didFinishSelector:@selector(request:finishedWithFeed:error:)];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
 - (void)request:(GDataServiceTicket *)ticket
 finishedWithFeed:(GDataFeedBase *)aFeed
           error:(NSError *)error {
-    _videos = (GDataFeedYouTubeVideo *)aFeed;
-    NSLog(@"VID: %@", _videos);
-    [self.tableView reloadData];
+    self.videoData = (GDataFeedYouTubeVideo *)aFeed;
+    self.videos = [self.videoData entries];
+    [self performSelectorOnMainThread:@selector(reloadTableView) withObject:nil waitUntilDone:NO];
 }
 
-
+- (void)reloadTableView {
+    [self.tableView reloadData];
+}
 - (GDataServiceGoogleYouTube *)youtubeService {
     static GDataServiceGoogleYouTube *_service = nil;
     if (!_service) {
@@ -71,33 +72,34 @@ finishedWithFeed:(GDataFeedBase *)aFeed
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    
+    return [self.videos count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    SifuOchVideoViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    GDataEntryYouTubeVideo *vid = (GDataEntryYouTubeVideo *)self.videos[indexPath.row];
     
-    // Configure the cell...
-    
+    cell.titleLabel.text = vid.title.stringValue;
+    cell.videoIcon.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[(GDataMediaThumbnail *)[(GDataYouTubeMediaGroup *)vid.mediaGroup mediaThumbnails][0] URLString]]]];
+    cell.descriptionLabel.text = vid.mediaGroup.mediaDescription.contentStringValue;
     return cell;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"VideoDetailSegue"]) {
+        GDataEntryYouTubeVideo *vid = (GDataEntryYouTubeVideo *)self.videos[[[self.tableView indexPathForSelectedRow] row]];
+    
+        SifuOchVideoDetailsViewController *controller = [segue destinationViewController];
+        controller.videoDescriptionView.text = vid.mediaGroup.mediaDescription.contentStringValue;
+    }
+}
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
- }
-*/
 @end
