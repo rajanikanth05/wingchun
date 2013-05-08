@@ -9,13 +9,13 @@
 #import "SifuOchYoutubeViewController.h"
 #import "SifuOchYoutubeChannel.h"
 
-@interface SifuOchYoutubeViewController ()
--(GDataServiceGoogleYouTube *)youtubeService;
-@end
+//@interface SifuOchYoutubeViewController ()
+//-(GDataServiceGoogleYouTube *)youtubeService;
+//@end
 
 @implementation SifuOchYoutubeViewController
 
-//Undefined symbols for architecture i386:
+/*Undefined symbols for architecture i386:
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -71,12 +71,14 @@ finishedWithFeed:(GDataFeedBase *)aFeed
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
 }
@@ -97,5 +99,5 @@ finishedWithFeed:(GDataFeedBase *)aFeed
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
  }
-
+*/
 @end

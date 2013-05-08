@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SifuOchArticle : NSObject
+@interface SifuOchArticle : NSObject {
+    NSString *articleId;
+    NSString *url;
+    NSString *title;
+    NSString *logo;
+    NSString *description;
+}
 
 @property(nonatomic, retain) NSString *title;
 @property(nonatomic, retain) NSString *url;

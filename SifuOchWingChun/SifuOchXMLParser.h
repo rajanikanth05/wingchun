@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "TBXML.h"
 
-@interface SifuOchXMLParser : NSObject
+@interface SifuOchXMLParser : NSObject {
+    NSMutableDictionary *parsedData;
+    NSMutableArray *youtubeVideos;
+    NSMutableArray *articles;
+}
 
 @property (nonatomic, retain) NSMutableDictionary *parsedData;
 @property (nonatomic, retain) NSMutableArray *youtubeVideos;
