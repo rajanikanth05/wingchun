@@ -35,9 +35,6 @@
 {
     if (_videoUrl != newVideoUrl) {
         _videoUrl = newVideoUrl;
-        NSLog(@"videoUrl: %@", _videoUrl);
-        // Update the view.
-        //[self configureView];
     }
     
     if (self.masterPopoverController != nil) {
@@ -73,8 +70,6 @@
     width=\"%0.0f\" height=\"%0.0f\"></embed>\
     </body></html>";
     NSString *html = [NSString stringWithFormat:embedHTML, urlString, frame.size.width, frame.size.height];
-    NSLog(@"kaka %@", html);
-    NSLog(@"mukka");
     [self.videoScreen loadHTMLString:html baseURL:nil];
 }
 

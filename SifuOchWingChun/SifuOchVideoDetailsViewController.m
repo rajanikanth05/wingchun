@@ -52,15 +52,9 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background-application.png"]]];
 
     [self embedYouTube:[_sashItem url] frame:CGRectMake(20, 20, 300, 250)];
-    NSLog(@"%@ %@", _sashItem.title, _sashItem.url);
     [[self videoDescriptionView] setText:[_sashItem description]];
     UITapGestureRecognizer *moreDescriptionTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(moreDetails)];
     [_videoDescriptionView addGestureRecognizer:moreDescriptionTap];

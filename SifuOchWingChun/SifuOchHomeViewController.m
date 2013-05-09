@@ -39,9 +39,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background-application.png"]]];
-    NSLog(@"dhamal");
     _tabBarItems = [[NSMutableArray alloc] init];
     _tabBarItemViews = [[NSMutableArray alloc] init];
     [[[self navigationController] navigationBar] setTintColor:[UIColor clearColor]
@@ -58,7 +56,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handlePushNotification:) name:@"PushNotification" object:nil];
-    NSLog(@"willapp");
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
 }
 
@@ -67,7 +64,6 @@
 }
 
 - (void)handlePushNotification:(NSNotification *)notification {
-    NSLog(@"okay");
     [self performSegueWithIdentifier:@"loveSegue" sender:self];
 }
 

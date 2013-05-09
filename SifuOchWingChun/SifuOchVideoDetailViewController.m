@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background-application.png"]]];
 
     self.videoDescriptionView.text = self.videoDescription;
     // Uncomment the following line to preserve selection between presentations.
@@ -24,7 +25,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    //[self embedYouTube:self.videoUrl frame:CGRectMake(0, 0, 280, 265)];
+    [self embedYouTube:self.videoUrl frame:CGRectMake(0, 0, 280, 265)];
 }
 
 - (void)embedYouTube:(NSString *)urlString frame:(CGRect)frame {

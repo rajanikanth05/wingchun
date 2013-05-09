@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SifuOchVideoDetailViewController : UITableViewController<UIWebViewDelegate>
-
+@interface SifuOchVideoDetailViewController : UITableViewController
 @property (weak, nonatomic) IBOutlet UIWebView *videoView;
 @property (weak, nonatomic) IBOutlet UITextView *videoDescriptionView;
-@property (weak, nonatomic) NSString *videoUrl;
-@property (weak, nonatomic) NSString *videoDescription;
+@property (weak, nonatomic) IBOutlet NSString *videoUrl;
+@property (weak, nonatomic) IBOutlet NSString *videoDescription;
 
 @end

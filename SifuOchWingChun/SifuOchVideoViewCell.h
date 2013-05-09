@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SifuOchVideoViewCell : UITableViewCell
-@property(weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property(weak, nonatomic) IBOutlet UITextView *titleLabel;
 @property(weak, nonatomic) IBOutlet UITextView *descriptionLabel;
 @property(weak, nonatomic) IBOutlet UIImageView *videoIcon;
 
