@@ -20,11 +20,6 @@
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background-application.png"]]];
 
     self.videoDescriptionView.text = self.videoDescription;
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     [self embedYouTube:self.videoUrl frame:CGRectMake(0, 0, 280, 265)];
 }
 
@@ -42,7 +37,8 @@
     width=\"%0.0f\" height=\"%0.0f\"></embed>\
     </body></html>";
     NSString *html = [NSString stringWithFormat:embedHTML, urlString, frame.size.width, frame.size.height];
-    [self.videoView loadHTMLString:html baseURL:nil];
+    NSLog(@"kaka %@", html);
+   [self.videoView loadHTMLString:html baseURL:nil];
 }
 
 @end

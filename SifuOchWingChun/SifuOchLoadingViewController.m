@@ -1,5 +1,5 @@
 //
-//  SifuOchLoadingViewController.m
+//  SifuOchLoadingView.m
 //  SifuOchWingChun
 //
 //  Created by Beesabathini,Rajanikanth on 5/9/13.
@@ -8,26 +8,37 @@
 
 #import "SifuOchLoadingViewController.h"
 
-@interface SifuOchLoadingViewController ()
+@interface SifuOchLoadingView ()
 
 @end
 
-@implementation SifuOchLoadingViewController
+@implementation SifuOchLoadingView
 
 - (id)init {
     if (!(self = [super init])) return  nil;
-
+    [self setBackgroundColor:[UIColor blackColor]];
+    self.frame = [[UIScreen mainScreen] bounds];
+    self.alpha = 0.4;
+    
     return self;
 }
 
-- (void)viewDidLoad {
-    [self.view setBackgroundColor:[UIColor clearColor]];
-    [self.view setFrame:CGRectMake(0, 0, 20, 20)];
-
-    self.loadingGraphic = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+- (void)start {
+    if (!self.loadingGraphic) {
+        self.loadingGraphic = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    }
+    
     [self.loadingGraphic setHidden:NO];
-    [self.view addSubview:self.loadingGraphic];
+    [self.loadingGraphic setBackgroundColor:[UIColor clearColor]];
+    [self.loadingGraphic setFrame:CGRectMake(self.frame.size.width/2, self.frame.size.height/2, 30, 30)];
+    [self addSubview:self.loadingGraphic];
+    [[[UIApplication sharedApplication] keyWindow] addSubview:self];
     [self.loadingGraphic startAnimating];
+}
+
+- (void)stop {
+    [self.loadingGraphic stopAnimating];
+    [self removeFromSuperview];
 }
 
 @end

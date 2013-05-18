@@ -12,9 +12,10 @@
 #import "SifuOchVideoDetailViewController.h"
 #import "SifuOchLoadingViewController.h"
 
-//@interface SifuOchYoutubeViewController ()
-//-(GDataServiceGoogleYouTube *)youtubeService;
-//@end
+@interface SifuOchYoutubeViewController ()
+-(GDataServiceGoogleYouTube *)youtubeService;
+@property (nonatomic, retain) SifuOchLoadingView *solv;
+@end
 
 @implementation SifuOchYoutubeViewController
 
@@ -31,25 +32,11 @@
 {
     [super viewDidLoad];
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background-application.png"]]];
-//    SifuOchLoadingViewController *solvc = [[SifuOchLoadingViewController alloc] init];
-//    [solvc.view setFrame:CGRectMake(0, 0, 20, 20)];
-//    [solvc.view setBackgroundColor:[UIColor grayColor]];
-//    [solvc.view setAlpha:0.2];
-//    [self setModalPresentationStyle:UIModalPresentationFormSheet];
+    
+    self.solv = [[SifuOchLoadingView alloc] init];
+    [self.solv start];
 
-//    [self presentViewController:solvc animated:YES completion:nil];
-    self.loadingGraphic = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-    
-    [self.loadingGraphic setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin];
-    if (!self.loadingGraphic.hidden) self.loadingGraphic.hidden = NO;
-    [self.loadingGraphic setBackgroundColor:[UIColor redColor]];
-    [self.loadingGraphic startAnimating];
-    CGRect frame = [[UIScreen mainScreen] bounds];
-    [self.loadingGraphic setFrame:CGRectMake(frame.size.width/2, frame.size.height/2, 20, 20)];
-    [self.view addSubview:self.loadingGraphic];
-    
     [self pullYoutubeChannelVideos];
-    //[self performSelectorInBackground:@selector(pullYoutubeChannelVideos) withObject:nil];
 }
 
 - (void)createLoadingView {
@@ -64,19 +51,20 @@
     NSURL *feedURL = [GDataServiceGoogleYouTube youTubeURLForUserID:@"wingchunchase" userFeedID:uploadId];
     [service fetchFeedWithURL:feedURL delegate:self didFinishSelector:@selector(request:finishedWithFeed:error:)];
 }
+
 - (void)request:(GDataServiceTicket *)ticket
 finishedWithFeed:(GDataFeedBase *)aFeed
           error:(NSError *)error {
     self.videoData = (GDataFeedYouTubeVideo *)aFeed;
     self.videos = [self.videoData entries];
     [self performSelectorOnMainThread:@selector(reloadTableView) withObject:nil waitUntilDone:NO];
-    [self.loadingGraphic stopAnimating];
-    //[self dismissViewControllerAnimated:YES completion:nil];
+    [self.solv stop];
 }
 
 - (void)reloadTableView {
     [self.tableView reloadData];
 }
+
 - (GDataServiceGoogleYouTube *)youtubeService {
     static GDataServiceGoogleYouTube *_service = nil;
     if (!_service) {
@@ -87,11 +75,6 @@ finishedWithFeed:(GDataFeedBase *)aFeed
     }
     [_service setUserCredentialsWithUsername:nil password:nil];
     return  _service;
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -127,8 +110,8 @@ finishedWithFeed:(GDataFeedBase *)aFeed
         controller.videoDescriptionView.text = vid.mediaGroup.mediaDescription.contentStringValue;
         NSString *url = [(GDataLink*)vid.links[0] href];
         url = [url substringToIndex:[url rangeOfString:@"&feature="].location];
-        
-        url = [url stringByReplacingOccurrencesOfString:@"?" withString:@"/"];
+        NSLog(@"url: %@", url);
+        url = [url stringByReplacingOccurrencesOfString:@"/watch?" withString:@"/"];
         url = [url stringByReplacingOccurrencesOfString:@"=" withString:@"/"];
         NSLog(@"url: %@", url);
         controller.videoUrl = url;

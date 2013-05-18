@@ -17,6 +17,4 @@
 @property(retain, nonatomic) GDataFeedYouTubeVideo *videoData;
 @property(weak, nonatomic) NSArray *videos;
 
-@property(retain, nonatomic) UIActivityIndicatorView *loadingGraphic;
-
 @end

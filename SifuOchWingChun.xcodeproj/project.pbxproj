@@ -12,6 +12,7 @@
 		9A98F739173AB5D100D75302 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A98F738173AB5D000D75302 /* SystemConfiguration.framework */; };
 		9A98F877173AD5E300D75302 /* SifuOchVideoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A98F876173AD5E300D75302 /* SifuOchVideoViewCell.m */; };
 		9A98F87A173AD9B200D75302 /* SifuOchVideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A98F879173AD9B100D75302 /* SifuOchVideoDetailViewController.m */; };
+		9A98F87D173BEAD300D75302 /* SifuOchLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A98F87C173BEAD100D75302 /* SifuOchLoadingViewController.m */; };
 		A83363871703DBD70006E544 /* SifuOchHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83363861703DBD70006E544 /* SifuOchHomeViewController.m */; };
 		A833638B1703E7240006E544 /* rooster.png in Resources */ = {isa = PBXBuildFile; fileRef = A833638A1703E7240006E544 /* rooster.png */; };
 		A83363901703E77A0006E544 /* crown.png in Resources */ = {isa = PBXBuildFile; fileRef = A833638C1703E77A0006E544 /* crown.png */; };
@@ -506,6 +507,8 @@
 		9A98F876173AD5E300D75302 /* SifuOchVideoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SifuOchVideoViewCell.m; sourceTree = "<group>"; };
 		9A98F878173AD9B100D75302 /* SifuOchVideoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SifuOchVideoDetailViewController.h; sourceTree = "<group>"; };
 		9A98F879173AD9B100D75302 /* SifuOchVideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SifuOchVideoDetailViewController.m; sourceTree = "<group>"; };
+		9A98F87B173BEACF00D75302 /* SifuOchLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SifuOchLoadingViewController.h; sourceTree = "<group>"; };
+		9A98F87C173BEAD100D75302 /* SifuOchLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SifuOchLoadingViewController.m; sourceTree = "<group>"; };
 		A83363851703DBD70006E544 /* SifuOchHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SifuOchHomeViewController.h; sourceTree = "<group>"; };
 		A83363861703DBD70006E544 /* SifuOchHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SifuOchHomeViewController.m; sourceTree = "<group>"; };
 		A833638A1703E7240006E544 /* rooster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rooster.png; sourceTree = "<group>"; };
@@ -1196,6 +1199,8 @@
 				9A98F879173AD9B100D75302 /* SifuOchVideoDetailViewController.m */,
 				A858E14E1724BB3500B787D1 /* SifuOchArticle.h */,
 				A858E14F1724BB3500B787D1 /* SifuOchArticle.m */,
+				9A98F87B173BEACF00D75302 /* SifuOchLoadingViewController.h */,
+				9A98F87C173BEAD100D75302 /* SifuOchLoadingViewController.m */,
 			);
 			path = SifuOchWingChun;
 			sourceTree = "<group>";
@@ -1494,6 +1499,7 @@
 				A858E1501724BB3500B787D1 /* SifuOchArticle.m in Sources */,
 				9A98F877173AD5E300D75302 /* SifuOchVideoViewCell.m in Sources */,
 				9A98F87A173AD9B200D75302 /* SifuOchVideoDetailViewController.m in Sources */,
+				9A98F87D173BEAD300D75302 /* SifuOchLoadingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1631,7 +1637,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32AD9381-55F2-4BCC-8E56-D8B6F8542270";
+				PROVISIONING_PROFILE = "556A0CB2-C419-4304-871C-0D2902583140";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "556A0CB2-C419-4304-871C-0D2902583140";
 				USER_HEADER_SEARCH_PATHS = "";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "";
 				WRAPPER_EXTENSION = app;
@@ -1654,7 +1661,8 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "32AD9381-55F2-4BCC-8E56-D8B6F8542270";
+				PROVISIONING_PROFILE = "556A0CB2-C419-4304-871C-0D2902583140";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "556A0CB2-C419-4304-871C-0D2902583140";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};

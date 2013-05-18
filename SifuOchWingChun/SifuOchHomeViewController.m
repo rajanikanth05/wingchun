@@ -100,7 +100,6 @@
 
 - (void)showSelectedItem:(UIGestureRecognizer *)gesture {
     [self resetTabBarItemBackgroundColor];
-    [[gesture view] setBackgroundColor:[UIColor grayColor]];
     
     switch ([[gesture view] tag]) {
         case 1:

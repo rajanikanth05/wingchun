@@ -44,7 +44,6 @@
 - (void)setSashItem:(SifuOchSashObject *)newSashItem {
     if (_sashItem != newSashItem) {
         _sashItem = newSashItem;
-        NSLog(@"New sashItem: %@", _sashItem.title);
     }
 }
 

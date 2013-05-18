@@ -1,5 +1,5 @@
 //
-//  SifuOchLoadingViewController.h
+//  SifuOchLoadingView.h
 //  SifuOchWingChun
 //
 //  Created by Beesabathini,Rajanikanth on 5/9/13.
@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SifuOchLoadingViewController : UIViewController
+@interface SifuOchLoadingView : UIView
 
 @property (retain, nonatomic) UIActivityIndicatorView *loadingGraphic;
+
+- (void)start;
+- (void)stop;
+
 @end
