@@ -13,6 +13,7 @@
 		9A98F877173AD5E300D75302 /* SifuOchVideoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A98F876173AD5E300D75302 /* SifuOchVideoViewCell.m */; };
 		9A98F87A173AD9B200D75302 /* SifuOchVideoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A98F879173AD9B100D75302 /* SifuOchVideoDetailViewController.m */; };
 		9A98F87D173BEAD300D75302 /* SifuOchLoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A98F87C173BEAD100D75302 /* SifuOchLoadingViewController.m */; };
+		9A98F8F21748589700D75302 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A98F8F11748589600D75302 /* QuartzCore.framework */; };
 		A83363871703DBD70006E544 /* SifuOchHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A83363861703DBD70006E544 /* SifuOchHomeViewController.m */; };
 		A833638B1703E7240006E544 /* rooster.png in Resources */ = {isa = PBXBuildFile; fileRef = A833638A1703E7240006E544 /* rooster.png */; };
 		A83363901703E77A0006E544 /* crown.png in Resources */ = {isa = PBXBuildFile; fileRef = A833638C1703E77A0006E544 /* crown.png */; };
@@ -509,6 +510,7 @@
 		9A98F879173AD9B100D75302 /* SifuOchVideoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SifuOchVideoDetailViewController.m; sourceTree = "<group>"; };
 		9A98F87B173BEACF00D75302 /* SifuOchLoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SifuOchLoadingViewController.h; sourceTree = "<group>"; };
 		9A98F87C173BEAD100D75302 /* SifuOchLoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SifuOchLoadingViewController.m; sourceTree = "<group>"; };
+		9A98F8F11748589600D75302 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A83363851703DBD70006E544 /* SifuOchHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SifuOchHomeViewController.h; sourceTree = "<group>"; };
 		A83363861703DBD70006E544 /* SifuOchHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SifuOchHomeViewController.m; sourceTree = "<group>"; };
 		A833638A1703E7240006E544 /* rooster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rooster.png; sourceTree = "<group>"; };
@@ -675,6 +677,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A98F8F21748589700D75302 /* QuartzCore.framework in Frameworks */,
 				A85179C916E9850600AEA9CA /* SenTestingKit.framework in Frameworks */,
 				A85179CA16E9850600AEA9CA /* UIKit.framework in Frameworks */,
 				A85179CB16E9850600AEA9CA /* Foundation.framework in Frameworks */,
@@ -687,7 +690,7 @@
 		9A98F722173AB55B00D75302 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A98F72A173AB55C00D75302 /* gdata-objectivec-client-read-only */,
+				9A98F72A173AB55C00D75302 /* GData.framework */,
 				9A98F72C173AB55C00D75302 /* libGDataTouchStaticLib.a */,
 				9A98F72E173AB55C00D75302 /* GDataUnitTests.octest */,
 				9A98F730173AB55C00D75302 /* GDataIPhoneUnitTests.octest */,
@@ -1106,6 +1109,7 @@
 		A851799216E9850500AEA9CA = {
 			isa = PBXGroup;
 			children = (
+				9A98F8F11748589600D75302 /* QuartzCore.framework */,
 				9A98F73A173AB6CD00D75302 /* Headers */,
 				9A98F738173AB5D000D75302 /* SystemConfiguration.framework */,
 				9A98F736173AB5C800D75302 /* Security.framework */,
@@ -1158,6 +1162,7 @@
 				A8B3A4DF171BAE1100B2D2EE /* SifuOchXMLParser.h */,
 				A8B3A4E0171BAE1100B2D2EE /* SifuOchXMLParser.m */,
 				A83363881703E6F90006E544 /* Resources */,
+				A85179A516E9850500AEA9CA /* Supporting Files */,
 				A85179AD16E9850500AEA9CA /* SifuOchAppDelegate.h */,
 				A85179AE16E9850500AEA9CA /* SifuOchAppDelegate.m */,
 				A85179B616E9850600AEA9CA /* MainStoryboard_iPhone.storyboard */,
@@ -1174,7 +1179,6 @@
 				A88EE3BD16EAF6A200D3291E /* SifuOchDescriptionViewController.m */,
 				A85179E816E9A2FF00AEA9CA /* SifuOchContactViewController.h */,
 				A85179E916E9A2FF00AEA9CA /* SifuOchContactViewController.m */,
-				A85179A516E9850500AEA9CA /* Supporting Files */,
 				A889DC7716EBA4B3006695A7 /* SifuOchDatabase.h */,
 				A889DC7816EBA4B3006695A7 /* SifuOchDatabase.m */,
 				A889DC7C16EBAD04006695A7 /* SifuOchSashObject.h */,
@@ -1315,10 +1319,9 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9A98F72A173AB55C00D75302 /* gdata-objectivec-client-read-only */ = {
+		9A98F72A173AB55C00D75302 /* GData.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			name = "gdata-objectivec-client-read-only";
 			path = GData.framework;
 			remoteRef = 9A98F729173AB55C00D75302 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;

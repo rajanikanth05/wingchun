@@ -30,6 +30,7 @@
 
 - (void)viewDidLoad
 {
+    NSLog(@"DID LOAD %@", self.videos);
     [super viewDidLoad];
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background-application.png"]]];
     

@@ -13,6 +13,7 @@
 #import "SifuOchNewsViewController.h"
 #import "SifuOchConnectViewController.h"
 #import "SifuOchYoutubeViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface SifuOchHomeViewController ()
 
@@ -40,6 +41,9 @@
 {
     [super viewDidLoad];
     [[self view] setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background-application.png"]]];
+    [self.logo setImage:[UIImage imageNamed:@"homeLogo.png"]];
+    [self animateLogo];
+    
     _tabBarItems = [[NSMutableArray alloc] init];
     _tabBarItemViews = [[NSMutableArray alloc] init];
     [[[self navigationController] navigationBar] setTintColor:[UIColor clearColor]
@@ -52,6 +56,17 @@
     
     [self populateTabBarItems];
     
+}
+
+- (void)animateLogo {
+    CABasicAnimation *rotationAnimation1;
+    rotationAnimation1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    rotationAnimation1.toValue = [NSNumber numberWithFloat: M_PI * 2.0 /* full rotation*/ * 3 * 3 ];
+    rotationAnimation1.duration = 30;
+    rotationAnimation1.cumulative =YES;
+    rotationAnimation1.repeatCount = 200;
+    
+    [self.logo.layer addAnimation:rotationAnimation1 forKey:@"rotationAnimation"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -11,6 +11,7 @@
 @interface SifuOchHomeViewController : UIViewController<UIScrollViewDelegate>
 
 @property(nonatomic, retain) IBOutlet UIScrollView *tabBar;
+@property(nonatomic, retain) IBOutlet UIImageView *logo;
 @property(nonatomic, retain) NSMutableArray *tabBarItems;
 @property(nonatomic, retain) NSMutableArray *tabBarItemViews;
 

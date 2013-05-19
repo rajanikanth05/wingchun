@@ -86,7 +86,7 @@
                             <view contentMode="scaleToFill" id="pe4-PV-8xf">
                                 <rect key="frame" x="20" y="47" width="280" height="339"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="homeLogo.png" id="yzu-J2-uCH">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="yzu-J2-uCH">
                                         <rect key="frame" x="53" y="87" width="175" height="175"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Sifu Och" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fhp-gk-4hj">
@@ -108,6 +108,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6zB-Hf-yCa"/>
                     <connections>
+                        <outlet property="logo" destination="yzu-J2-uCH" id="Yuf-rU-GGO"/>
                         <outlet property="tabBar" destination="ayC-5Y-NwW" id="qrl-qe-iMZ"/>
                         <segue destination="Ikq-zG-63i" kind="push" identifier="webSegue" id="z6E-wT-0pe"/>
                         <segue destination="kzm-qA-Ubs" kind="push" identifier="aboutSegue" id="U7j-4a-M9l"/>
@@ -408,7 +409,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Dfe-7A-WqE">
-                                <rect key="frame" x="59" y="167" width="70" height="70"/>
+                                <rect key="frame" x="59" y="183" width="70" height="70"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="foursquare.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -419,7 +420,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WMI-KY-dnc">
-                                <rect key="frame" x="198" y="167" width="70" height="70"/>
+                                <rect key="frame" x="198" y="183" width="70" height="70"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="instagram.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -430,7 +431,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sNu-NB-wB3">
-                                <rect key="frame" x="59" y="397" width="70" height="70"/>
+                                <rect key="frame" x="59" y="345" width="70" height="70"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="google_plus.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -441,7 +442,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Fid-zH-Byd">
-                                <rect key="frame" x="198" y="397" width="70" height="70"/>
+                                <rect key="frame" x="198" y="345" width="70" height="70"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="pinterest.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -896,7 +897,6 @@
         <image name="facebook.png" width="70" height="70"/>
         <image name="foursquare.png" width="70" height="70"/>
         <image name="google_plus.png" width="70" height="70"/>
-        <image name="homeLogo.png" width="175" height="175"/>
         <image name="instagram.png" width="70" height="70"/>
         <image name="map.png" width="70" height="70"/>
         <image name="phone.png" width="70" height="70"/>
@@ -960,6 +960,7 @@
         <class className="SifuOchHomeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SifuOchHomeViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="logo" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="tabBar" candidateClass="UIScrollView"/>
             </relationships>
         </class>
